@@ -1,5 +1,6 @@
 from flask import Flask
 from exercises import factorial,isPalindrome
+from scrappy import get_teams
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ def index():
 
 @app.route("/hello")
 def hello():
-    return "Hello World!"
+    return get_teams()
 
 
 @app.route("/factorial/<int:number>")
