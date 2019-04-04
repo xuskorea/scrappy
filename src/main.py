@@ -1,8 +1,8 @@
 import os
 
 from flask import Flask, json, jsonify
-from src.exercises import factorial, isPalindrome
-from src.scrapper.scrappy import get_teams
+from exercises import factorial, isPalindrome
+from scrapper.scrappy import get_teams
 from flask_sqlalchemy import SQLAlchemy
 
 project_dir = os.path.dirname(os.path.abspath(__file__))

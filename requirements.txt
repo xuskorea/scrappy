@@ -1,0 +1,5 @@
+SQLAlchemy==1.1.9
+Flask_SQLAlchemy==2.2
+Flask
+beautifulsoup4
+requests
