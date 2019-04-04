@@ -1,14 +1,14 @@
 import requests
 
+
 from bs4 import BeautifulSoup
 
 url = 'https://www.resultados-futbol.com/segundab'
 
 
 def get_teams():
-    """
-    Get the articles from the front page of the blog
-    """
+
+
     req = requests.get(url)
     html = req.text
     soup = BeautifulSoup(html, 'html.parser')
@@ -33,15 +33,13 @@ def get_teams():
         team["win"] = win.getText()
 
         draw = row.find("td", class_="draw")
-        team["win"] = draw.getText()
+        team["draw"] = draw.getText()
 
         lose = row.find("td", class_="lose")
-        team["win"] = lose.getText()
+        team["lose"] = lose.getText()
         teams.append(team)
     return teams
 
 
-if __name__ == '__main__':
-    names = get_teams()
-    print(names)
+
 
